@@ -61,13 +61,13 @@ app.post("/logistics", async (req, res) => {
     });
   }
 
-  // Create a new student instance
+  // Create a new logistic instance
   const Log = new Logistic({ orderid, phone, email, destination, shipping });
 
   try {
-    // Save the new student to the database
+    // Save the new logistics to the database
     await Log.save();
-    // Respond with the newly created student
+    // Respond with the newly created logistics
     res.status(201).json(Log);
   } catch (err) {
     // Handle errors
